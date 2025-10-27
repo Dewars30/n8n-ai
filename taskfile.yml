@@ -1,1 +1,25 @@
-(paste the yaml content above)
+version: '3'
+
+tasks:
+  init:
+    desc: One-time setup
+    cmds:
+      - pnpm install
+      - docker compose up -d
+      - pnpm prisma migrate deploy
+      - pnpm tsx tools/seed-nodes.ts
+
+  dev:
+    desc: Start full dev stack
+    deps: [init]
+    cmds:
+      - concurrently "pnpm --filter ai-service dev" "pnpm --filter n8n-fork dev"
+
+  storybook:
+    cmds:
+      - pnpm --filter ui storybook
+
+  build:
+    cmds:
+      - pnpm -r build
+      - docker build -t n8n-ai:latest .

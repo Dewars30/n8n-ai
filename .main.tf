@@ -13,7 +13,7 @@ terraform {
 
 variable "repo_url" {
   description = "GitHub repo that contains the n8n-ai source"
-  default     = "https://github.com/YOUR_USER/n8n-ai.git"
+  default     = "https://github.com/dewars30/n8n-ai.git"
 }
 
 variable "disk_size" {
