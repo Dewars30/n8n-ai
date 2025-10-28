@@ -2,9 +2,14 @@
   "name": "n8n-ai",
   "private": true,
   "packageManager": "pnpm@8.15.0",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "dev": "task dev",
     "build": "task build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

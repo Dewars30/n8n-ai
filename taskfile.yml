@@ -7,7 +7,7 @@ tasks:
       - docker compose up -d
   dev:
     cmds:
-      - concurrently "pnpm --filter ai-service dev" "pnpm --filter n8n-ui dev"
+      - pnpm -w dlx concurrently "pnpm --filter ai-service dev" "pnpm --filter n8n-ui dev"
   build:
     cmds:
       - pnpm -r build

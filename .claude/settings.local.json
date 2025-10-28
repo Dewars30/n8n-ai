@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm:*)",
+      "Bash(task:*)",
+      "Bash(docker:*)",
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Bash(claude:*)",
+      "Bash(npm:*)",
+      "Bash(node:*)",
+      "Bash(tsx:*)",
+      "Bash(vitest:*)",
+      "Bash(playwright:*)",
+      "Bash(prisma:*)",
+      "Bash(curl:*)",
+      "Bash(psql:*)",
+      "Bash(redis-cli:*)",
+      "Read(//workspace/**)",
+      "Write(//workspace/**)",
+      "Read(//var/run/**)",
+      "Bash(env)",
+      "Bash(ps:*)",
+      "Bash(kill:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "time",
+    "fetch",
+    "memory",
+    "google-ocr",
+    "qdrant",
+    "task-master-ai"
+  ]
+}
