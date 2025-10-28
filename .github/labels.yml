@@ -1,0 +1,90 @@
+# Label Taxonomy for Issue Classification
+
+## 1.0 Type Classification
+- name: "type:feature"
+  color: "0E8A16"
+  description: "New functionality or capability"
+
+- name: "type:bug"
+  color: "D73A4A"
+  description: "Defect or unexpected behavior"
+
+- name: "type:refactor"
+  color: "FBCA04"
+  description: "Code restructuring without behavior change"
+
+- name: "type:docs"
+  color: "0075CA"
+  description: "Documentation updates"
+
+- name: "type:test"
+  color: "BFD4F2"
+  description: "Test coverage or quality improvements"
+
+## 2.0 Priority Classification
+- name: "priority:P0"
+  color: "B60205"
+  description: "Critical - Immediate action required"
+
+- name: "priority:P1"
+  color: "D93F0B"
+  description: "High - Address in current sprint"
+
+- name: "priority:P2"
+  color: "FBCA04"
+  description: "Medium - Address in upcoming sprint"
+
+- name: "priority:P3"
+  color: "0E8A16"
+  description: "Low - Backlog item"
+
+## 3.0 Status Classification
+- name: "status:needs-triage"
+  color: "EDEDED"
+  description: "Requires initial review and categorization"
+
+- name: "status:ready"
+  color: "C5DEF5"
+  description: "Specification complete, ready for implementation"
+
+- name: "status:in-progress"
+  color: "0075CA"
+  description: "Active development"
+
+- name: "status:blocked"
+  color: "D93F0B"
+  description: "External dependency or decision required"
+
+- name: "status:review"
+  color: "FBCA04"
+  description: "Implementation complete, awaiting review"
+
+## 4.0 Component Classification
+- name: "component:ai-service"
+  color: "1D76DB"
+  description: "AI service backend"
+
+- name: "component:n8n-fork"
+  color: "5319E7"
+  description: "n8n workflow engine modifications"
+
+- name: "component:ui"
+  color: "D4C5F9"
+  description: "User interface components"
+
+- name: "component:infra"
+  color: "C2E0C6"
+  description: "Infrastructure and deployment"
+
+## 5.0 Special Classifications
+- name: "jules:assigned"
+  color: "FF6B6B"
+  description: "Assigned to Jules AI agent"
+
+- name: "needs:design"
+  color: "FFA07A"
+  description: "Requires design specification"
+
+- name: "needs:discussion"
+  color: "D4A5A5"
+  description: "Requires team discussion"

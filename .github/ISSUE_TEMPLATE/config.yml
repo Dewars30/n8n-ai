@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/dewars30/n8n-ai/wiki
+    about: Review project documentation and architecture specifications
+  - name: Discussions
+    url: https://github.com/dewars30/n8n-ai/discussions
+    about: General questions, ideas, and community discussion

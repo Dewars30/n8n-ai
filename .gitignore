@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/
+.npm
+.pnpm-debug.log*
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build Artifacts
+dist/
+build/
+*.tsbuildinfo
+.next/
+out/
+
+# Testing
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# Docker
+.docker/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Coder (Deprecated Infrastructure)
+.coder/
+main.tf.backup
+CODER_*.md
+
+# Sensitive Data
+*.key
+*.pem
+*.crt

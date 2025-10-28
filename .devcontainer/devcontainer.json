@@ -1,0 +1,62 @@
+{
+  "name": "n8n-ai",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12"
+    }
+  },
+  "containerEnv": {
+    "DOCKER_BUILDKIT": "1",
+    "PNPM_HOME": "/home/node/.local/share/pnpm"
+  },
+  "forwardPorts": [5678, 6006, 5432, 6379],
+  "portsAttributes": {
+    "5678": {
+      "label": "n8n-ai",
+      "onAutoForward": "notify"
+    },
+    "6006": {
+      "label": "Storybook",
+      "onAutoForward": "silent"
+    },
+    "5432": {
+      "label": "PostgreSQL",
+      "onAutoForward": "silent"
+    },
+    "6379": {
+      "label": "Redis",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "mkdir -p $HOME/.local/bin && pip install --user claude-code && curl -sL https://taskfile.dev/install.sh | sh -s -- -b $HOME/.local/bin && export PATH=$HOME/.local/bin:$PATH && pnpm install",
+  "postStartCommand": "sudo chgrp docker /var/run/docker.sock && sudo chmod 660 /var/run/docker.sock",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Vue.volar",
+        "bradlc.vscode-tailwindcss",
+        "ms-playwright.playwright",
+        "ms-vscode.vscode-typescript-next",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "Prisma.prisma"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        }
+      }
+    }
+  },
+  "remoteUser": "node",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,readonly,type=bind"
+  ]
+}

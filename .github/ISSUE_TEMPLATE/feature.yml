@@ -1,0 +1,75 @@
+name: Feature Request
+description: Propose new functionality or capability
+title: "[FEATURE] "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Specification Template
+        Provide complete technical specification for new capability.
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 1.0 Feature Objective
+      description: Define capability goals and success criteria
+      placeholder: |
+        Clear statement of intended functionality.
+        Measurable success metrics.
+    validations:
+      required: true
+
+  - type: textarea
+    id: specification
+    attributes:
+      label: 2.0 Technical Specification
+      description: Detailed implementation requirements
+      placeholder: |
+        2.1 Component Requirements
+        • List required components
+        • Specify dependencies
+        • Define interfaces
+
+        2.2 Data Requirements
+        • Input formats
+        • Output specifications
+        • State management
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 3.0 Acceptance Criteria
+      description: Define completion requirements
+      placeholder: |
+        • Criterion 1
+        • Criterion 2
+        • Criterion 3
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 4.0 Priority Classification
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 5.0 Additional Context
+      description: Supporting information, references, constraints
+      placeholder: |
+        • Related issues
+        • External dependencies
+        • Technical constraints

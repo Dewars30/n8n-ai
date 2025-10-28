@@ -1,0 +1,82 @@
+name: Bug Report
+description: Document defect or unexpected behavior
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Defect Report Template
+        Provide complete reproduction and diagnostic information.
+
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 1.0 Observed Behavior
+      description: Precise description of defect manifestation
+      placeholder: |
+        • Specific error message or failure mode
+        • Affected component/module
+        • Frequency of occurrence
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 2.0 Expected Behavior
+      description: Define correct operation specification
+      placeholder: Clear statement of intended functionality
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 3.0 Reproduction Steps
+      description: Minimal sequence to trigger defect
+      placeholder: |
+        1. Execute command/action
+        2. Verify state
+        3. Observe failure
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 4.0 Environment Specification
+      description: System configuration at failure time
+      placeholder: |
+        • OS: 
+        • Node version:
+        • Package versions:
+        • Environment variables:
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: 5.0 Diagnostic Output
+      description: Error messages, logs, stack traces
+      placeholder: |
+        ```
+        Paste complete error output
+        ```
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 6.0 Severity Classification
+      options:
+        - S0 - Critical (system failure)
+        - S1 - High (major feature broken)
+        - S2 - Medium (workaround exists)
+        - S3 - Low (cosmetic/minor)
+    validations:
+      required: true
